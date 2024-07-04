@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joke App</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Joke App</h1>
+    <form action="/get-joke" method="POST">
+      <label for="name">Enter your name:</label>
+      <input type="text" id="name" name="name" required>
+      <button type="submit">Get a Joke</button>
+    </form>
+
+    <% if (typeof joke !== 'undefined') { %>
+      <h2>Hello, <%= name %>!</h2>
+      <p class="joke">Here is your joke:</p>
+      <p class="joke"><%= joke %></p>
+    <% } %>
+  </div>
+</body>
+</html>
+
